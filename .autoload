@@ -1,0 +1,17 @@
+#
+#
+
+# ENV #
+
+ [ -z "$CVANTONIOSG" ] && CVANTONIOSG="$PWD"
+
+ # check if already in a virtualenv
+ type deactivate >/dev/null 2>&1
+ rc=$?
+ [ "$rc" -eq 0 ] && deactivate
+
+ activate="$CVANTONIOSG/site-env/bin/activate" 
+ [ -f "$activate" ] && . $activate
+
+
+### EOF ###
